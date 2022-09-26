@@ -1,0 +1,136 @@
+#halloffame,
+#clipes,
+#emotes {
+    border: 1px solid white;
+    display: inline-block;
+    width: 15rem;
+    height: 15rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-left: 1rem;
+    position: relative;
+    left: 22rem;
+    top: 8rem;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#halloffame p,
+#clipes p,
+#emotes p {
+    position: relative;
+    top: 6rem;
+}
+
+#halloffame:hover,
+#clipes:hover,
+#emotes:hover {
+    border: 1px solid red;
+    color: red;
+
+    transition: 0.3s;
+}
+
+.overlay_upload {
+    position: relative;
+    display: inline-block;
+    margin: 0px auto;
+    width: 50%;
+    color: #f8f8f2;
+    top: 1rem;
+}
+
+.add {
+    display: inline-block;
+    background-color: #12121a;
+
+    height: 35rem;
+    width: 50rem;
+    border-top: 2px solid red;
+    position: relative;
+    left: 20rem;
+}
+.add form {
+    margin-top: 14rem;
+    text-align: center;
+}
+.add h3 {
+    position: relative;
+    font-size: 14px;
+    top: 21.5rem;
+    text-align: center;
+}
+
+.add h1 {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    top: 1.2rem;
+}
+
+.add input {
+    color: #ffffff;
+    background-color: #12121a;
+    width: 23.5rem;
+    height: 1.7rem;
+    border-radius: 8px;
+    border: 1px solid red;
+}
+
+#uploadLabel {
+    display: inline-block;
+    margin: 10px;
+    width: 2.5rem;
+}
+
+.uploadForm {
+    position: relative;
+    bottom: 13rem;
+}
+
+#uploadText {
+    font-size: 12px;
+}
+
+#uploadText p {
+    display: inline-block;
+    color: #c03b3b;
+}
+
+#uploadImage {
+    position: relative;
+    top: 10rem;
+    display: block;
+    margin-top: -22.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+#uploadSubmit {
+    position: relative;
+    top: 13rem;
+    margin-top: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    background: linear-gradient(#12121a, #12121a) padding-box,
+        linear-gradient(to right, #9b0101, #ff4646) border-box;
+    border: 1px solid transparent;
+    color: #ff4646;
+    cursor: pointer;
+}
+
+#uploadSubmit:hover {
+    width: 25rem;
+}
+#clipe p {
+    color: #ff4646;
+}
+
+#textAlert {
+    position: relative;
+    font-size: 14px;
+    top: 20.5rem;
+    text-align: center;
+}

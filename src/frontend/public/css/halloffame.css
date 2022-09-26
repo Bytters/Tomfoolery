@@ -1,0 +1,240 @@
+.winnerEmote,
+.winnerClip {
+    position: relative;
+    right: 28rem;
+    top: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 0 auto;
+    width: 20rem;
+}
+.winnerEmote {
+    position: fixed;
+    top: 27rem;
+    left: 61rem;
+    width: 5rem;
+    height: 6.4rem;
+}
+
+.winnerClip {
+    position: fixed;
+    top: 23rem;
+    left: -9rem;
+    width: 24rem;
+    height: 12rem;
+}
+#clipe {
+    position: fixed;
+    top: 27rem;
+    width: 24rem;
+    height: 12rem;
+}
+
+#emote {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 7rem;
+    height: 7rem;
+}
+
+#search {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    border: 1px solid white;
+    position: absolute;
+    top: -3rem;
+    margin-left: 187px;
+    cursor: pointer;
+    margin-top: 9rem;
+}
+
+#meses {
+    background-color: var(--main-background);
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    height: 1.8rem;
+    width: 9rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.month {
+    border-radius: 15px;
+    height: 23rem;
+    display: flex;
+    justify-content: center;
+}
+
+#search:hover {
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9;
+    transition: 0.3s;
+}
+
+.winersTrohpy {
+    display: flex;
+    justify-content: center;
+    margin-right: 36rem;
+}
+
+#emoteText {
+    text-align: center;
+    position: relative;
+    bottom: 6rem;
+    font-size: 24px;
+    text-shadow: 1px 1px #ff0000;
+    width: 16rem;
+    right: 5rem;
+}
+
+#clipText {
+    text-align: center;
+    position: relative;
+    bottom: 7rem;
+    text-shadow: 1px 1px #ff0000;
+}
+#trophyClip {
+    position: absolute;
+    margin: auto;
+    top: -37rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#winnerText {
+    text-align: center;
+    position: relative;
+    top: 4.5rem;
+}
+
+#trophyEmote {
+    position: absolute;
+    margin: auto;
+    top: -30rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .winnerEmote {
+        position: fixed;
+        top: 27rem;
+        left: 55rem;
+        width: 5rem;
+        height: 6.4rem;
+    }
+}
+
+@media screen and (max-width: 1245px) {
+    .winnerEmote {
+        width: 2rem;
+        height: 2rem;
+    }
+    #emote {
+        position: absolute;
+        margin: auto;
+        top: -45px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 5rem;
+        height: 5rem;
+    }
+    .winnerEmote {
+        width: 4rem;
+        height: 6rem;
+    }
+    #emoteText {
+        right: 6rem;
+        font-size: 28px;
+    }
+
+    .winnerClip {
+        position: fixed;
+        left: 10rem;
+        width: 24rem;
+        height: 12rem;
+    }
+}
+
+@media screen and (max-width: 1142px) {
+    .winnerEmote {
+        left: 51rem;
+    }
+}
+/* 1120 */
+
+@media screen and (max-width: 1084px) {
+    #trophyEmote,
+    #trophyClip {
+        display: none;
+    }
+    .winnerClip {
+        margin: auto;
+        width: 50%;
+        position: initial;
+        margin-top: -17rem;
+    }
+
+    #clipe {
+        top: 14rem;
+        width: 51%;
+        height: 31%;
+        position: absolute;
+    }
+
+    .winnerEmote {
+        position: initial;
+        margin-top: 3rem;
+    }
+
+    #clipText {
+        bottom: 7rem;
+    }
+    #emoteText {
+        bottom: 5.5rem;
+        font-size: 22px;
+    }
+    #emote {
+        top: 28rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    #clipText {
+        bottom: 6rem;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #clipText {
+        font-size: 23px;
+    }
+    #emote {
+        top: 29rem;
+    }
+
+    #clipe {
+        top: 13rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #emote {
+        top: 29rem;
+    }
+}
+
+/* @media screen and (max-width: 800px) {
+    #emote {
+        top: 31rem;
+    }
+} */

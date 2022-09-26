@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/clipes.css" />
+        <link rel="stylesheet" href="css/input.css" />
+        <link rel="stylesheet" href="/css/popouts/usercard.css" />
+        <link rel="icon" href="/assets/TF_logo.png" />
+
+        <script src="/scripts/login.js" defer></script>
+        <script src="/scripts/user.js" defer></script>
+        <script src="/scripts/clipes.js" defer></script>
+        <title>Clipes - Tomfoolery</title>
+    </head>
+    <body>
+        <header><%- include('partials/header.ejs'); %></header>
+        <div class="clips-container">
+            <div class="buttons">
+                <input
+                    type="button"
+                    value="arrow_back_ios"
+                    id="back"
+                    class="material-icons"
+                />
+                <input
+                    type="button"
+                    value="arrow_forward_ios"
+                    id="next"
+                    class="material-icons"
+                />
+            </div>
+            <form action="clipes/vote" method="POST">
+                <iframe
+                    src=""
+                    frameborder="0"
+                    allowfullscreen="true"
+                    scrolling="no"
+                    height="378"
+                    width="620"
+                    id="twitch-clips"
+                ></iframe>
+                <label for="clipes">
+                    <input type="radio" name="clipes" id="clipes" />
+                    <p id="select-clip">Selecionar clip</p>
+                    <button type="submit" id="submit_clip">Enviar</button>
+                </label>
+            </form>
+        </div>
+        <script>
+            let links = "<%= link %>"
+            let clipes = links.split(",")
+        </script>
+    </body>
+</html>

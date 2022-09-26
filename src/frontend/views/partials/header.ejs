@@ -1,0 +1,30 @@
+<nav class="nav-menu">
+    <a href="/emotes" class="navegation">Emotes</a>
+    <a href="/clipes" class="navegation">Clipes</a>
+    <a href="/halloffame" class="navegation">Hall of fame</a>
+    <% if(locals.logged){ %>
+    <div class="user" id="user">
+        <img src=" <%= user_avatar %> " alt="" id="user_avatar" />
+        <p><%= username %></p>
+    </div>
+    <% } else { %>
+    <a id="login" href="" target="_blank">
+        <img id="twitch" src="/assets/twitch_icon.png" />
+    </a>
+    <% } %>
+</nav>
+
+<div>
+    <%- include ('usercard.ejs') %>
+    </div>
+    
+    <div class="logo">
+        <figure class="circle"></figure>
+    
+        <a href="/home">
+            <img
+                src="/assets/TF_logo.png"
+                alt="tomfoolery_logo"
+            />
+        </a>
+    </div>

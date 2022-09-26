@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/home.css" />
+        <link rel="stylesheet" href="/css/popouts/usercard.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" href="/assets/TF_logo.png" />
+        <script src="/scripts/login.js" defer></script>
+        <script src="/scripts/user.js" defer></script>
+        <script src="/scripts/home.js" defer></script>
+        <title>Home - Tomfoolery</title>
+    </head>
+    <body>
+        <header><%- include('partials/header.ejs'); %></header>
+        <div class="container">
+            <h1 id="changeText">Bom dia</h1>
+            <ul>
+                <li>
+                    <h2>O que são as votações?</h2>
+                    <p>
+                        A cada mês as votações serão abertas, assim você poderá
+                        votar no emote ou clipe que você mais gostou.
+                    </p>
+                </li>
+                <li>
+                    <h2>Incrivel! Mas o que o site registra?</h2>
+                    <p>
+                        Nada mais que o seu userid(isso é publico), o emote e o
+                        clipe que você votou.
+                    </p>
+                </li>
+                <li>
+                    <div class="texts">
+                        <h2>Ok, eu entendi tudo isso, mas onde eu começo?</h2>
+                        <p>
+                            Você so precisa clicar em um dos links abaixo e você
+                            vai para a pagina de votação.
+                        </p>
+                    </div>
+                    <div class="links">
+                        <a href="https://tomfoolery.herokuapp.com/emotes">Emote</a>
+                        <a href="https://tomfoolery.herokuapp.com/clipes">Clipe</a>
+                    </div>
+                </li>
+            </ul>
+            <img src="/assets/tf_news.png" id="tomfooleryLogo" alt="logo" />
+        </div>
+    </body>
+</html>

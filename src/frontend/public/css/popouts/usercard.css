@@ -1,0 +1,56 @@
+div .usercard {
+    background-color: #171720;
+    width: 8rem;
+    height: 5rem;
+    text-align: center;
+
+    border-radius: 0px 0px 0px 15px;
+
+    position: sticky;
+    top: 60px;
+    float: right;
+
+    visibility: hidden;
+    opacity: 0;
+
+    margin-top: -2rem;
+}
+
+div #logoutElem {
+    background-color: #212225;
+
+    position: relative;
+    cursor: pointer;
+    color: var(--white-color);
+    text-decoration: none;
+}
+div #logoutElem:hover {
+    background-color: #44475a;
+    display: inline-block;
+    width: 7rem;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+div .material-icons {
+    position: relative;
+    top: 5px;
+}
+
+div #dashboardLink {
+    background-color: #212225;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+div #dashboardLink:hover {
+    background-color: #44475a;
+    display: inline-block;
+    width: 7rem;
+    height: 2em;
+    border-radius: 5px;
+    transition: 0.1s;
+}

@@ -1,0 +1,41 @@
+#tomfooleryLogo {
+    width: 15rem;
+    height: 15rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: #ffffff;
+    border-radius: 20%;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h2 {
+    color: #ff6464;
+}
+.container a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    width: 5rem;
+    margin-top: 2px;
+}
+.links {
+    margin-top: 2rem;
+}
+
+#changeText {
+    margin-left: 8rem;
+}
+
+
+.container a:hover {
+    display: inline-block;
+    border-bottom: 1px solid rgb(243, 13, 13);
+    width: 10rem;
+    transition: .2s;
+}

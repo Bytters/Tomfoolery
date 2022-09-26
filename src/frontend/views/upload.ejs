@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/popouts/usercard.css" />
+        <link rel="stylesheet" href="/css/dashboard/upload.css" />
+        <script src="/scripts/user.js" defer></script>
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/emotes.css" />
+        <link rel="stylesheet" type="text/css" href="/css/dashboard.css" />
+
+        <link rel="stylesheet" href="/css/input.css" />
+
+        <link rel="icon" href="/assets/TF_logo.png" />
+        <script src="/scripts/login.js" defer></script>
+
+        <title>Upload - Tomfoolery</title>
+    </head>
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+        <div class="linksUpload">
+            <a
+                href="https://tomfoolery.herokuapp.com/admin/dashboard/upload/clipes"
+                id="clipes"
+                ><p>Adicionar clipes</p></a
+            >
+            <a
+                href="https://tomfoolery.herokuapp.com/admin/dashboard/upload/emotes"
+                id="emotes"
+                ><p>Adicionar emotes</p></a
+            >
+        </div>
+        <div class="sidebar"><%- include('dashboard/sidebar.ejs') %></div>
+    </body>
+</html>

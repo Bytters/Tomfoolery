@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@300&display=swap");
+
+:root {
+    --main-background: #0a0a0e;
+    --white-color: #f8f8f2;
+    --border-color: #ff0000;
+    --twitch-color: #6441a5;
+    --circle-border: #ee7676;
+}
+
+body {
+    background-color: var(--main-background);
+    color: var(--white-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.logo img {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0.2rem;
+}
+
+.logo .circle {
+    position: absolute;
+    margin-top: -13rem;
+    height: 11rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-left: -5.4rem;
+}
+
+#pphop {
+    position: absolute;
+    right: 40rem;
+}
+
+#feelsbadman {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#error_text {
+    position: relative;
+    top: 14px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#closed_okay {
+    display: block;
+    margin: auto;
+    margin-left: auto;
+
+    position: relative;
+    height: 6rem;
+    bottom: 1rem;
+}
+
+.closedContainer {
+    background-color: #1e1f25;
+    height: 12rem;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 5rem;
+    border: 1px solid #ff0000;
+}
+
+.warning-container {
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 4rem;
+    position: relative;
+    top: 23rem;
+    height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    width: 18%;
+    font-size: 10px;
+    border-radius: 2rem;
+    background-color: #282a36;
+    border-top: 1px solid rgb(112, 255, 112);
+}
+
+.warning-container h1 {
+    position: relative;
+    top: 10px;
+}

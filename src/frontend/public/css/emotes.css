@@ -1,0 +1,90 @@
+.emotes-container {
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 3rem;
+    margin: 0 auto;
+    width: 75rem;
+}
+
+.emotes-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.emotes-form p {
+    position: relative;
+    top: 8px;
+    font-size: 13px;
+}
+
+.emotes-form img {
+    height: 80px;
+    width: 80px;
+}
+
+.emotes-form label {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 13px;
+    border-radius: 7px;
+    background-color: #171720;
+
+    border: 1px solid #171720;
+
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.emotes-form label:hover {
+    border: 1px solid #ff0000;
+
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 1300px) {
+    .emotes-container {
+        width: 50rem;
+    }
+
+    .emotes-form img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .emotes-form p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .emotes-container {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .emotes-container {
+        width: 18rem;
+        margin-bottom: 2rem;
+    }
+    .emotes-form img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .emotes-form p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .emotes-container {
+        width: 40%;
+        margin-bottom: 2rem;
+    }
+}

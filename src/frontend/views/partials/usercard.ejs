@@ -1,0 +1,13 @@
+<div class="usercard" id="usercard">
+    <div id="myModal" class="modal">
+        <a href="https://tomfoolery.herokuapp.com/users/login/logout" id="logoutElem">
+            <div class="material-icons">logout</div>
+            Sair
+        </a>
+        <% if(locals.admin){ %>
+        <a href="admin/dashboard" id="dashboardLink">Dashboard</a>
+        <% } %>
+    </div>
+</div>
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/assets/TF_logo.png" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/popouts/usercard.css" />
+        <link rel="stylesheet" href="/css/dashboard/upload.css" />
+        <script src="/scripts/user.js" defer></script>
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/emotes.css" />
+        <link rel="stylesheet" type="text/css" href="/css/dashboard.css" />
+        <link rel="stylesheet" type="text/css" href="/css/dashboard/uploadClipes.css" />
+        <link rel="stylesheet" href="/css/input.css" />
+        <title>Upload - Clipes</title>
+    </head>
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+        <div class="sidebar"><%- include('dashboard/sidebar.ejs') %></div>
+        
+        <div id="overlay_upload">
+            <div class="add">
+                <h1>Adicionar Clipes</h1>
+                <h3 id="clipe">
+                   Coloque o id do clipe:
+                    https://www.twitch.tv/ghiletofar/clip/
+                    <p>PoisedFastCurlewANELE-eZ2YQi3rdQ5YyPx5</p>
+                </h3> 
+                <form
+                    action="clipes/add"
+                    method="POST"
+                    class="uploadForm"
+                >
+                    <label for="uploadLabel" id="uploadLabel">Nome</label>
+                    <input
+                        type="text"
+                        name="clipe_name"
+                        id="UploadName"
+                        placeholder="Nome do clipe"
+                    />
+                    <br />
+                    <label for="uploadLink" id="uploadLabel">Link</label>
+                    <input
+                        type="text"
+                        name="clipe_link"
+                        id="uploadLink"
+                        placeholder="PoisedFastCurlewANELE-eZ2YQi3rdQ5YyPx5"
+                        />
+                    <span class="button_border"
+                        ><input type="submit" value="Enviar" id="uploadSubmit"
+                    /></span>
+                </form>
+                <img
+                    src="https://cdn.7tv.app/emote/6042998c1d4963000d9dae34/4x.avif"
+                    alt="FeelsOkayMan"
+                    id="uploadImage"
+                />
+            </div>
+            <div id="close_popout"></div>
+        </div>
+    </body>
+</html>

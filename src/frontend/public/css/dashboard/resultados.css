@@ -1,0 +1,83 @@
+.emotes {
+    position: absolute;
+    top: 5rem;
+    margin-left: 7rem;
+}
+
+.names {
+    background-color: #8a3333;
+}
+
+.names th {
+    border: 1px solid #8a3333;
+}
+
+#count {
+    border: 1px solid #ff30304d;
+    border-radius: 4px;
+    height: 5rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.clipesTable {
+    position: absolute;
+    margin-left: 49rem;
+    top: 5rem;
+}
+
+#clipe {
+    background-color: #8a3333;
+
+    width: 17rem;
+}
+
+#countClip {
+    border: 1px solid #ff30304d;
+    border-radius: 4px;
+
+    text-align: center;
+}
+
+#countClipe {
+    background-color: #8a3333;
+    border: 1px solid #8a3333;
+    width: 15rem;
+}
+#clipes {
+    border: 1px solid #ff30304d;
+    border-radius: 4px;
+}
+
+#clipName {
+    text-align: center;
+    height: 4rem;
+}
+
+.emote {
+    position: relative;
+    top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+}
+
+
+.emoteName {
+    position: relative;
+    top: 35px;
+}
+
+.backgroundCount {
+    background-color: #171720;
+    width: 6rem;
+    height: 8rem;
+    margin-bottom: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
