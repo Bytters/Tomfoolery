@@ -171,7 +171,6 @@
         left: 51rem;
     }
 }
-/* 1120 */
 
 @media screen and (max-width: 1084px) {
     #trophyEmote,
@@ -188,7 +187,7 @@
     #clipe {
         top: 14rem;
         width: 51%;
-        height: 31%;
+        height: 15rem;
         position: absolute;
     }
 
@@ -205,16 +204,11 @@
         font-size: 22px;
     }
     #emote {
-        top: 28rem;
+        display: block;
+        margin: 0 auto;
+        margin-top: 38rem;
     }
 }
-
-@media screen and (min-width: 740px) {
-    #emote {
-        top: 38rem;
-    }
-}
-
 
 @media screen and (max-width: 400px) {
     #clipText {
@@ -232,10 +226,3 @@
         top: 13rem;
     }
 }
-
-
-/* @media screen and (max-width: 800px) {
-    #emote {
-        top: 31rem;
-    }
-} */
