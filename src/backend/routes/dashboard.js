@@ -34,6 +34,7 @@ router.get("/", (req, res) => {
 router.get("/resultados", async (req, res) => {
     isAdmin(req, res, req.session.userid)
     isLogged(req, res)
+    verifyAdmin(req, res, "upload")
 
     if (!req.session.userid) {
         res.redirect("/home")
@@ -86,7 +87,9 @@ router.post("/upload/halloffame/add", async (req, res) => {
         await db.query(
             `INSERT INTO public.halloffame(mes, emote, clipe) VALUES('${hof.month}', '${hof.emote}', '${hof.clipe}')`
         )
-        res.redirect("https://tomfoolery.herokuapp.com/admin/dashboard/upload/halloffame")
+        res.redirect(
+            "https://tomfoolery.herokuapp.com/admin/dashboard/upload/halloffame"
+        )
     } else {
         res.redirect("/error/forbidden")
     }
@@ -115,15 +118,15 @@ router.post("/upload/emotes/add", async (req, res) => {
     isLogged(req, res)
     isAdmin(req, res, req.session.userid)
 
-    
-    
     if (!req.session.userid) {
         res.redirect("/home")
     } else if (admins.includes(Number(req.session.userid))) {
         await db.query(
             `INSERT INTO public.emotes(name, link, count) VALUES('${req.body.emote_name}', '${req.body.emote_link}', 0)`
         )
-        res.redirect("https://tomfoolery.herokuapp.com/admin/dashboard/upload/emotes")
+        res.redirect(
+            "https://tomfoolery.herokuapp.com/admin/dashboard/upload/emotes"
+        )
     } else {
         res.redirect("/error/forbidden")
     }
@@ -139,7 +142,9 @@ router.post("/upload/clipes/add", async (req, res) => {
         await db.query(
             `INSERT INTO public.clipes(name, clip, count) VALUES('${req.body.clipe_name}', '${req.body.clipe_link}', 0)`
         )
-        res.redirect("https://tomfoolery.herokuapp.com/admin/dashboard/upload/clipes")
+        res.redirect(
+            "https://tomfoolery.herokuapp.com/admin/dashboard/upload/clipes"
+        )
     } else {
         res.redirect("/error/forbidden")
     }

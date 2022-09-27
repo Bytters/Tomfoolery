@@ -7,10 +7,10 @@
     height: 15rem;
     text-align: center;
     border-radius: 12px;
-    margin-left: 1rem;
-    position: relative;
-    left: 22rem;
-    top: 8rem;
+    margin-left: -33rem;
+    /* position: relative; */
+    /* left: 22rem; */
+    /* top: 8rem; */
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
@@ -132,5 +132,8 @@
     position: relative;
     font-size: 14px;
     top: 20.5rem;
+    text-align: center;
+}
+.linksUpload {
     text-align: center;
 }

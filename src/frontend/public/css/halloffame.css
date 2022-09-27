@@ -69,6 +69,7 @@
     height: 23rem;
     display: flex;
     justify-content: center;
+    margin-left: 10rem;
 }
 
 #search:hover {
@@ -207,6 +208,14 @@
         top: 28rem;
     }
 }
+
+@media screen and (min-width: 740px) {
+    #emote {
+        top: 38rem;
+    }
+}
+
+
 @media screen and (max-width: 400px) {
     #clipText {
         bottom: 6rem;
@@ -218,20 +227,12 @@
     #clipText {
         font-size: 23px;
     }
-    #emote {
-        top: 29rem;
-    }
 
     #clipe {
         top: 13rem;
     }
 }
 
-@media screen and (max-width: 490px) {
-    #emote {
-        top: 29rem;
-    }
-}
 
 /* @media screen and (max-width: 800px) {
     #emote {

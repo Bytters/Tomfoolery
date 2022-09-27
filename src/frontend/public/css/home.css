@@ -32,10 +32,22 @@
     margin-left: 8rem;
 }
 
-
 .container a:hover {
     display: inline-block;
     border-bottom: 1px solid rgb(243, 13, 13);
     width: 10rem;
-    transition: .2s;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 412px) {
+    .container {
+        margin-top: 3rem;
+    }
+    #changeText {
+        margin-left: 0rem;
+    }
+    #tomfooleryLogo {
+        width: 10rem;
+        height: 10rem;
+    }
 }

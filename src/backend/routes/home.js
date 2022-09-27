@@ -4,7 +4,6 @@ const axios = require("axios")
 const db = require("../database/database")
 const isAdmin = require("../utils/isAdmin")
 
-
 const isLogged = require("../utils/logged")
 
 router.use(express.json())

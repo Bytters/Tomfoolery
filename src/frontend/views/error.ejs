@@ -18,11 +18,9 @@
     </head>
     <body>
         <header><%- include('partials/header.ejs'); %></header>
-        <img
-            src="<%= error_image %>"
-            alt="FeelsBadMan"
-            id="feelsbadman"
-        />
-        <p id="error_text"><%= error_message %></p>
+        <main class="errorContainer">
+            <img src="<%= error_image %>" alt="FeelsBadMan" id="feelsbadman" />
+            <p id="error_text"><%= error_message %></p>
+        </main>
     </body>
 </html>
