@@ -35,7 +35,7 @@ app.set("view engine", "ejs")
 app.set("views", "src/frontend/views")
 app.use(express.static(__dirname + "/frontend/public/"))
 
-app.use("/admin/dashboard", get.emotes)
+app.use("/admin/dashboard", get.dashboard)
 app.use("/users/login/", get.login)
 app.use("/halloffame", get.halloffame)
 app.use("/clipes", get.clipes)
