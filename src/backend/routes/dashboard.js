@@ -34,7 +34,6 @@ router.get("/", (req, res) => {
 router.get("/resultados", async (req, res) => {
     isAdmin(req, res, req.session.userid)
     isLogged(req, res)
-    verifyAdmin(req, res, "upload")
 
     if (!req.session.userid) {
         res.redirect("/home")
