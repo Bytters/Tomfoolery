@@ -36,6 +36,7 @@ router.get("/", async (req, res, next) => {
 
 router.get("/logout", (req, res) => {
     if (req.session) {
+        res.clearCookie('login', { path: '/' })
         req.session.destroy((err) => {
             res.redirect("/home")
             if (err) {
