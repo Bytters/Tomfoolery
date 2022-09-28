@@ -35,11 +35,7 @@ router.get("/", async (req, res, next) => {
 })
 
 router.get("/logout", (req, res) => {
-    if (req.session && req.session.cookie) {
-        res.cookie("connect.sid", null, {
-            expires: new Date("Thu, 01 Jan 1970 00:00:00 UTC"),
-            httpOnly: true,
-        })
+    if (req.session) {
         req.session.destroy((err) => {
             res.redirect("/home")
             if (err) {
