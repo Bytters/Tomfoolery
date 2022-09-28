@@ -14,7 +14,7 @@ const isLogged = require("./backend/utils/logged")
 const sevenTV = require("./backend/utils/7tv")
 const isAdmin = require("./backend/utils/isAdmin")
 const get = require("./routers")
-sevenTV()
+// sevenTV()
 
 app.set("trust proxy", 1)
 app.use(
