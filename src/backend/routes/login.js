@@ -11,8 +11,9 @@ router.use(express.json())
 
 router.get("/", async (req, res, next) => {
     const getCode = req.query.code
- 
-    const getToken = await axios.post(
+
+    const getToken = await axios
+        .post(
             `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_ID}&client_secret=${process.env.TWITCH_CLIENT}&code=${getCode}&grant_type=authorization_code&redirect_uri=https://tomfoolery.herokuapp.com/users/login`
         )
         .then((response) => {
@@ -34,8 +35,11 @@ router.get("/", async (req, res, next) => {
 })
 
 router.get("/logout", (req, res) => {
-    res.clearCookie('connect.sid', { path: '/' })
-    if (req.session) {
+    if (req.session && req.session.cookie) {
+        res.cookie("connect.sid", null, {
+            expires: new Date("Thu, 01 Jan 1970 00:00:00 UTC"),
+            httpOnly: true,
+        })
         req.session.destroy((err) => {
             res.redirect("/home")
             if (err) {
