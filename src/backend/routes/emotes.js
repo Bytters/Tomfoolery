@@ -11,7 +11,7 @@ router.get("/", async (req, res, next) => {
     isLogged(req, res)
     isAdmin(req, res, req.session.userid)
     const getEmotes = await db
-        .query("SELECT * FROM public.emotes")
+        .query("SELECT * FROM public.emotes ORDER BY name")
         .then((res) => {
             return res.rows
         })
