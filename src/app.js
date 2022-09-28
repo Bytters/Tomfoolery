@@ -21,7 +21,13 @@ app.use(
     session({
         secret: process.env.SECRET_SESSION,
         resave: false,
-        saveUninitialized: true
+        saveUninitialized: true,
+        cookie: {
+            path: "/",
+            httpOnly: true,
+            secure: false,
+            maxAge: 24 * 60 * 60 * 1000,
+        },
     })
 )
 
