@@ -17,7 +17,6 @@ router.get("/", async (req, res, next) => {
         )
         .then((response) => {
             const acess = response.data.access_token
-            console.log(acess)
             axiosGET(acess)
                 .then((i) => {
                     req.session.username = i.data.data[0].login
@@ -35,9 +34,9 @@ router.get("/", async (req, res, next) => {
 })
 
 router.get("/logout", (req, res) => {
+    res.clearCookie('connect.sid', { path: '/' })
     if (req.session) {
         req.session.destroy((err) => {
-            res.clearCookie('connect.sid', { path: '/' })
             res.redirect("/home")
             if (err) {
                 console.log(err)
