@@ -4,5 +4,6 @@ const acess =
 
 element.addEventListener("click", () => {
     window.close()
+    element.target = "_blank"
     element.href = acess
 })
