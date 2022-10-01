@@ -50,27 +50,6 @@ body {
     text-align: center;
 }
 
-#closed_okay {
-    display: block;
-    margin: auto;
-    margin-left: auto;
-
-    position: relative;
-    height: 6rem;
-    bottom: 1rem;
-}
-
-.closedContainer {
-    background-color: #1e1f25;
-    height: 12rem;
-    border-radius: 15px;
-    width: 50%;
-    margin: 0 auto;
-    position: relative;
-    bottom: 5rem;
-    border: 1px solid #ff0000;
-}
-
 .warning-container {
     visibility: hidden;
     opacity: 0;
