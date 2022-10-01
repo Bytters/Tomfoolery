@@ -6,4 +6,5 @@ module.exports = get = {
     error: require("./backend/routes/error"),
     halloffame: require("./backend/routes/halloffame"),
     home: require("./backend/routes/home"),
+    closed: require("./backend/routes/closed"),
 }
