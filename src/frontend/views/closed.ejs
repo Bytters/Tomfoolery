@@ -10,24 +10,24 @@
         />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/emotes.css" />
         <link rel="stylesheet" href="/css/popouts/usercard.css" />
-        <link rel="stylesheet" href="/css/closed.css" />
         <script src="/scripts/user.js" defer></script>
 
         <link rel="icon" href="/assets/TF_logo.png" />
+        <script src="/scripts/popout.js" defer></script>
         <script src="/scripts/login.js" defer></script>
-        <title>Emotes - Tomfoolery</title>
+        <title>Closed - Tomfoolery</title>
     </head>
     <body>
         <header><%- include('partials/header.ejs'); %></header>
-        <main class="closed">
-            <h1 id="text">Votação encerrada</h1>
-            <div class="container">
-                <img
-                    src="https://cdn.7tv.app/emote/630660200e929d2fde44db5b/3x"
-                    alt=""
-                />
-            </div>
-        </main>
+        <div class="closedContainer">
+            <h1 id="closedH1">Votação encerrada</h1>
+            <img
+                src="https://cdn.7tv.app/emote/630660200e929d2fde44db5b/3x"
+                alt=""
+                id="closed_okay"
+            />
+        </div>
     </body>
 </html>
