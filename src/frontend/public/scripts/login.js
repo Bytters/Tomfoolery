@@ -3,10 +3,9 @@ const acess =
     "https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=m2svdyi6a64r0b20cbmhte48x2pn6a&redirect_uri=https://tomfoolery.herokuapp.com/users/login&scope=user_read"
 
 element.addEventListener("click", () => {
-    window.open(
-        acess,
-        "_blank",
-        "location=yes,height=570,width=520,scrollbars=yes,status=yes"
-    )
-    window.close()
+    element.target = "_blank"
+    element.href = acess
+    setTimeout(() => {
+        window.close()
+    }, 200)
 })
