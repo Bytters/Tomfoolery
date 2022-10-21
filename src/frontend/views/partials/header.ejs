@@ -3,10 +3,12 @@
     <a href="/clipes" class="navegation">Clipes</a>
     <a href="/halloffame" class="navegation">Hall of fame</a>
     <% if(locals.logged){ %>
-    <div class="user" id="user">
-        <img src=" <%= user_avatar %> " alt="" id="user_avatar" />
-        <p><%= username %></p>
-    </div>
+        <div class="container">
+            <div class="user" id="user">
+                <img src=" <%= user_avatar %> " alt="" id="user_avatar" />
+                <p><%= username %></p>
+            </div>
+        </div>
     <% } else { %>
     <a id="login" href="">
         <img id="twitch" src="/assets/twitch_icon.png" />

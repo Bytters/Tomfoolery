@@ -23,7 +23,7 @@
             <form method="GET" action="halloffame" class="month">
                 <select name="meses" id="meses">
                     <% for(let i=0; i < mes.length; i++) { %>
-                    <option value="<%= mes[i] %>" class="option">
+                    <option value="<%= mes[i] %>" class="option" selected>
                         <%= mes[i] %>
                     </option>
                     <% } %>
@@ -40,7 +40,7 @@
                     alt="trophy"
                 />
                 <iframe
-                    src="https://clips.twitch.tv/embed?clip=<%= clipe %>&parent=tomfoolery.herokuapp.com"
+                    src="https://clips.twitch.tv/embed?clip=<%= clipe %>&parent=localhost"
                     frameborder="0"
                     id="clipe"
                 ></iframe>
@@ -54,7 +54,7 @@
                 />
                 <h1 id="emoteText">Emote ganhador</h1>
                 <img src="<%= emote %>" alt="winner_clipe" id="emote" />
-                <p id="winnerText">DRESSED</p>
+                    <p id="winnerText"><%= name %></p>
             </div>
         </div>
     </body>

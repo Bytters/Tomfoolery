@@ -16,11 +16,16 @@ router.get("/", async (req, res, next) => {
         .then((res) => {
             return res.rows
         })
-
+        const userid = req.session.userid
+    const getVoted = await db.query("SELECT * FROM public.usuarios")
+    const voted = !userid ? undefined : await db.query(`SELECT userid FROM public.usuarios WHERE userid = ${userid}`).then((res) => {return res.rows[0]})
+   console.log(voted, userid)
     res.render("emotes", {
         emotesList: getEmotes,
         user_avatar: req.session.useravatar,
         username: req.session.username,
+        userid: req.session.userid,
+        voted: voted
     })
 })
 

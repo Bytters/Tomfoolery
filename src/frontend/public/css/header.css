@@ -75,6 +75,7 @@ nav .user {
     height: 2.4rem;
     border: 1px solid #2b2b3c;
     cursor: pointer;
+    width: 10rem;
 }
 
 nav .user:hover {
@@ -82,17 +83,13 @@ nav .user:hover {
 }
 
 nav .user p {
-    position: relative;
-    top: 8px;
     font-size: 15px;
-    display: inline-block;
     background-color: #2b2b3c;
-    padding-right: 10px;
     padding-left: 7px;
+    padding-top: 7px;
 }
 
 nav .user img {
-    /* position: relative; */
     background-color: #46495c;
     border-radius: 50%;
 }

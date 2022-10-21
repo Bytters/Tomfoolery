@@ -38,11 +38,15 @@
                         id="<%= emotesList[i].name %>"
                         value="<%= emotesList[i].name %>"
                     />
-                    <img src="<%= emotesList[i].link %>" alt="<%= emotesList[i].name %>" />
+                    <img
+                        src="<%= emotesList[i].link %>"
+                        alt="<%= emotesList[i].name %>"
+                    />
                     <p><%= emotesList[i].name %></p>
                 </label>
                 <% } %>
             </form>
+            <%- include('partials/voted.ejs') %>
         </div>
     </body>
 </html>

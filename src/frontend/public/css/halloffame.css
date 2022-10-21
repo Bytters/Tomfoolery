@@ -23,12 +23,16 @@
     left: -9rem;
     width: 24rem;
     height: 12rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
+
 #clipe {
     position: fixed;
-    top: 27rem;
-    width: 24rem;
-    height: 12rem;
+    width: 26rem;
+    height: 13rem;
 }
 
 #emote {
@@ -69,7 +73,6 @@
     height: 23rem;
     display: flex;
     justify-content: center;
-    margin-left: 10rem;
 }
 
 #search:hover {
@@ -97,7 +100,7 @@
 #clipText {
     text-align: center;
     position: relative;
-    bottom: 7rem;
+    padding-bottom: 23rem;
     text-shadow: 1px 1px #ff0000;
 }
 #trophyClip {
@@ -112,7 +115,7 @@
 #winnerText {
     text-align: center;
     position: relative;
-    top: 4.5rem;
+    top: 5.2rem;
 }
 
 #trophyEmote {
@@ -194,10 +197,6 @@
     .winnerEmote {
         position: initial;
         margin-top: 3rem;
-    }
-
-    #clipText {
-        bottom: 7rem;
     }
     #emoteText {
         bottom: 5.5rem;

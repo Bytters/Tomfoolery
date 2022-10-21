@@ -14,7 +14,7 @@ router.get("/", async (req, res, next) => {
 
     const getToken = await axios
         .post(
-            `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_ID}&client_secret=${process.env.TWITCH_CLIENT}&code=${getCode}&grant_type=authorization_code&redirect_uri=https://tomfoolery.herokuapp.com/users/login`
+            `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_ID}&client_secret=${process.env.TWITCH_CLIENT}&code=${getCode}&grant_type=authorization_code&redirect_uri=http://localhost:3000/users/login`
         )
         .then((response) => {
             const acess = response.data.access_token

@@ -13,32 +13,35 @@ router.get("/", async (req, res) => {
     isLogged(req, res)
     isAdmin(req, res, req.session.userid)
 
-    const month = req.query.meses || "agosto"
-    let hofArr = []
+    const month = req.query.meses || "setembro"
+    let months = []
+    let names = []
 
-    const searchMonth = `SELECT * FROM public.halloffame WHERE mes = '${month}'`
+    const search = `SELECT * FROM public.halloffame WHERE mes = '${month}'`
     const hofDB = "SELECT * FROM public.halloffame"
 
-    const getWinners = await db.query(searchMonth).then((res) => {
-        return res.rows[0]
+    const getWinners = await db.query(search)
+    const add = await db.query(hofDB)
+
+    add.rows.forEach((e) => {
+        months.push(e.mes)
     })
 
-    const addHof = await db.query(hofDB).then((res) => {
-        return res.rows
+    getWinners.rows.forEach((emoteName) => {
+        names.push(emoteName.nome)
     })
 
-    addHof.forEach((e) => {
-        hofArr.push(e.mes)
-    })
-
-    res.render("halloffames.ejs", {
-        mes: hofArr,
-        clipe: getWinners.clipe,
-        emote: getWinners.emote,
+    const renderObj = {
+        mes: months,
+        clipe: getWinners.rows[0].clipe,
+        emote: getWinners.rows[0].emote,
         monthSelected: req.query.meses,
         username: req.session.username,
         user_avatar: req.session.useravatar,
-    })
+        name: getWinners.rows[0].nome,
+    }
+
+    res.render("halloffames.ejs", renderObj)
 })
 
 module.exports = router
