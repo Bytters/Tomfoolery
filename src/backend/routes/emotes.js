@@ -47,7 +47,6 @@ router.post("/vote", async (req, res) => {
         )
     ).rows[0]
 
-    console.log(!userExists)
     if (userExists) {
         res.redirect("/error")
         return
