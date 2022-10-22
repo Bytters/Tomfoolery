@@ -33,11 +33,11 @@ router.get("/", async (req, res) => {
 
     const renderObj = {
         mes: months,
-        clipe: getWinners.rows[0].clipe,
-        emote: getWinners.rows[0].emote,
-        monthSelected: req.query.meses,
         username: req.session.username,
         user_avatar: req.session.useravatar,
+        monthSelected: req.query.meses,
+        emote: getWinners.rows[0].emote,
+        clipe: getWinners.rows[0].clipe,
         name: getWinners.rows[0].nome,
     }
 

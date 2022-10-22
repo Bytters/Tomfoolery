@@ -11,58 +11,51 @@ router.get("/", async (req, res, next) => {
     isLogged(req, res)
     isAdmin(req, res, req.session.userid)
 
-    const getEmotes = await db
-        .query("SELECT * FROM public.emotes ORDER BY name")
-        .then((res) => {
-            return res.rows
-        })
-        const userid = req.session.userid
+    const userid = req.session.userid
+    const getEmotes = (
+        await db.query("SELECT * FROM public.emotes ORDER BY name")
+    ).rows
     const getVoted = await db.query("SELECT * FROM public.usuarios")
-    const voted = !userid ? undefined : await db.query(`SELECT userid FROM public.usuarios WHERE userid = ${userid}`).then((res) => {return res.rows[0]})
-   console.log(voted, userid)
-    res.render("emotes", {
+
+    const body = {
         emotesList: getEmotes,
         user_avatar: req.session.useravatar,
         username: req.session.username,
         userid: req.session.userid,
-        voted: voted
-    })
+    }
+
+    res.render("emotes", body)
 })
 
 router.post("/vote", async (req, res) => {
     const emote = req.body.emoteVoted
     const userid = req.session.userid
 
-    const action = {
-        update: `UPDATE public.emotes SET count = count + 1 WHERE name = '${emote}'`,
-        add: `INSERT INTO public.usuarios(userid, emote_voted) VALUES (${userid}, '${emote}')`,
-    }
-
     if (!userid) {
         res.redirect("/error/unauthorized")
         return
     }
 
-    const userExists = await db
-        .query(`SELECT userid FROM public.usuarios WHERE userid = ${userid}`)
-        .then((res) => {
-            return res.rows[0]
-        })
+    const action = {
+        update: `UPDATE public.emotes SET count = count + 1 WHERE name = '${emote}'`,
+        add: `INSERT INTO public.usuarios(userid, emote_voted) VALUES (${userid}, '${emote}')`,
+    }
 
-    setTimeout(async () => {
-        try {
-            if (!userExists) {
-                await db.query(action.add)
-                await db.query(action.update)
-                res.redirect("/emotes")
-            } else {
-                res.redirect("/error")
-                return
-            }
-        } catch (err) {
-            console.log(err)
-        }
-    }, 2000)
+    const userExists = (
+        await db.query(
+            `SELECT userid FROM public.usuarios WHERE userid = ${userid}`
+        )
+    ).rows[0]
+
+    console.log(!userExists)
+    if (userExists) {
+        res.redirect("/error")
+        return
+    } else {
+        await db.query(action.update)
+        await db.query(action.add)
+        res.redirect("/error/voted")
+    }
 })
 
 module.exports = router

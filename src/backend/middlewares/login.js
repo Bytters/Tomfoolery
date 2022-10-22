@@ -12,26 +12,19 @@ router.use(express.json())
 router.get("/", async (req, res, next) => {
     const getCode = req.query.code
 
-    const getToken = await axios
-        .post(
-            `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_ID}&client_secret=${process.env.TWITCH_CLIENT}&code=${getCode}&grant_type=authorization_code&redirect_uri=http://localhost:3000/users/login`
-        )
-        .then((response) => {
-            const acess = response.data.access_token
-            axiosGET(acess)
-                .then((i) => {
-                    req.session.username = i.data.data[0].login
-                    req.session.userid = i.data.data[0].id
-                    req.session.useravatar = i.data.data[0].profile_image_url
-                    res.redirect("/home")
-                })
-                .catch((err) => {
-                    console.log(err)
-                })
-        })
-        .catch((err) => {
-            return err
-        })
+    const token = await axios.post(`https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_ID}&client_secret=${process.env.TWITCH_CLIENT}&code=${getCode}&grant_type=authorization_code&redirect_uri=https://tomfoolery.herokuapp.com/users/login`)
+    const acess = token.data["access_token"]
+    const userData = await axiosGET(acess).catch((err) => {
+        console.log(err)
+    })
+    req.session.username = userData.data.data[0].login
+    req.session.userid = userData.data.data[0].id
+    req.session.useravatar = userData.data.data[0]["profile_image_url"]
+    console.log(
+        (req.session.useravatar = userData.data.data[0]["profile_image_url"])
+    )
+
+    res.redirect("/home")
 })
 
 router.get("/logout", (req, res) => {

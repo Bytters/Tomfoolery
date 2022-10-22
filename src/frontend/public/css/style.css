@@ -36,13 +36,6 @@ body {
     right: 40rem;
 }
 
-#feelsbadman {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    left: 4.5rem;
-}
 #error_text {
     position: relative;
     top: 14px;
@@ -94,4 +87,10 @@ body {
 .warning-container h1 {
     position: relative;
     top: 10px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

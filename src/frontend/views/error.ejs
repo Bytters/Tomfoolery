@@ -14,13 +14,15 @@
 
         <link rel="icon" href="/assets/TF_logo.png" />
         <script src="/scripts/login.js" defer></script>
-        <title>Home - Tomfoolery</title>
+        <title>Error - Tomfoolery</title>
     </head>
     <body>
         <header><%- include('partials/header.ejs'); %></header>
         <main class="errorContainer">
-            <img src="<%= error_image %>" alt="FeelsBadMan" id="feelsbadman" />
-            <p id="error_text"><%= error_message %></p>
+            <div class="img">
+                <img src="<%= image %>" alt="FeelsBadMan" id="feelsbadman" />
+            </div>
+            <p id="error_text"><%= message %></p>
         </main>
     </body>
 </html>

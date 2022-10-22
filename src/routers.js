@@ -1,6 +1,6 @@
 module.exports = get = {
     emotes: require("./backend/routes/emotes"),
-    login: require("./backend/routes/login"),
+    login: require("./backend/middlewares/login"),
     clipes: require("./backend/routes/clipes"),
     dashboard: require("./backend/routes/dashboard"),
     error: require("./backend/routes/error"),
