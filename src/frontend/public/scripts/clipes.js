@@ -25,6 +25,8 @@ twitch_clips.setAttribute(
 )
 
 twitch_clips.setAttribute("value", `${clipes[0]}`)
+value.setAttribute("value", clipes[0])
+
 
 back.addEventListener("click", () => {
     if (i <= 0) {
@@ -46,6 +48,7 @@ function setClipes(id) {
 
     return (
         twitch_clips.setAttribute("src", urlClip),
+        twitch_clips.setAttribute("value", clipes[id]),
         value.setAttribute("value", clipes[id])
     )
 }

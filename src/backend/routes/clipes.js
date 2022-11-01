@@ -30,9 +30,8 @@ router.get("/", async (req, res) => {
 })
 
 router.post("/vote", async (req, res) => {
-    const clipe = req.body.clipes
     const userid = req.session.userid
-    console.log(clipe)
+    const clipe = req.body.clipes
     if (!userid) {
         res.redirect("/error/unauthorized")
         return
@@ -41,8 +40,8 @@ router.post("/vote", async (req, res) => {
     const action = {
         update:
             `UPDATE public.clipes SET count = count + 1 WHERE clip = '${clipe}'`,
-        add: 
-            `INSERT INTO public.userclip(userid, voted) VALUES (${userid}, ${clipe})`,
+        add:
+            `INSERT INTO public.userclip(userid, voted) VALUES (${userid}, '${clipe}')`,
     }
 
     const userExists = (
