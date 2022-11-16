@@ -14,7 +14,6 @@ const isLogged = require("./backend/utils/logged")
 const sevenTV = require("./backend/utils/7tv")
 const isAdmin = require("./backend/utils/isAdmin")
 const get = require("./routers")
-sevenTV()
 
 app.set("trust proxy", 1)
 app.use(
@@ -30,6 +29,10 @@ app.use(
         },
     })
 )
+
+setInterval(() => {
+    sevenTV()
+}, 5000)
 
 app.set("view engine", "ejs")
 app.set("views", "src/frontend/views")
