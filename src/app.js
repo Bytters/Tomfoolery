@@ -30,10 +30,10 @@ app.use(
     })
 )
 
-setInterval(() => {
+/* setInterval(() => {
     sevenTV()
 }, 5000)
-
+*/ 
 app.set("view engine", "ejs")
 app.set("views", "src/frontend/views")
 app.use(express.static(__dirname + "/frontend/public/"))
