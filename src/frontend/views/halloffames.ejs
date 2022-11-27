@@ -22,11 +22,15 @@
         <div class="hof-container">
             <form method="GET" action="halloffame" class="month">
                 <select name="meses" id="meses">
-                    <% for(let i=0; i < mes.length; i++) { %>
-                    <option value="<%= mes[i] %>" class="option" selected>
-                        <%= mes[i] %>
+                    <option value="agosto" class="option" id="august">
+                        agosto
                     </option>
-                    <% } %>
+                    <option value="setembro" class="option" id="september">
+                        setembro
+                    </option>
+                    <option value="outubro" class="option" id="october" selected>
+                        outubro
+                    </option>
                 </select>
                 <button type="submit" class="material-icons" id="search">
                     search
@@ -56,6 +60,25 @@
                 <img src="<%= emote %>" alt="winner_clipe" id="emote" />
                     <p id="winnerText"><%= name %></p>
             </div>
+            <script>
+                const august = document.getElementById("august")
+                const september = document.getElementById("september")
+                const october = document.getElementById("october")
+                switch("<%= monthSelected %>") {
+                    case "agosto":
+                        august.setAttribute("selected", "agosto")
+                        console.log("tnasds")
+                        break
+                    case "setembro":
+                        september.setAttribute("selected", "setembro")
+                        console.log("hi")
+                        break
+                    case "outubro":
+                        october.setAttribute("selected", "outubro")
+                        console.log("hello")
+                        break
+                }
+            </script>
         </div>
     </body>
 </html>

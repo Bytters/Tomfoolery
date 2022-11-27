@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
     isLogged(req, res)
     isAdmin(req, res, req.session.userid)
 
-    const month = req.query.meses || "setembro"
+    const month = req.query.meses || "outubro"
     let months = []
     let names = []
 
