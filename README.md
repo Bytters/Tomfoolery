@@ -1,4 +1,3 @@
 # Tomfoolery
 
-
-Antigo repositorio da tomfoolery awards
+Antigo repositório da Tomfoolery Awards
